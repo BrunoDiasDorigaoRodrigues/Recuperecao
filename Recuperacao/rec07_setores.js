@@ -10,19 +10,19 @@
 
 const entrada = require('readline-sync');
 
-const qntd = entrada.questionInt("Digite a quantidade de nomes para cada setor :")
+const qntd = entrada.questionInt("Digite a quantidade de nomes para cada setor :");
 
 const nomes = []
 
 for (let i = 0; i < qntd; i++) {
     let nome = entrada.question(
-        `Digite o nome ${i + 1}: `
+        `Digite o ${i+1} nome: `
 
     );
 
     nomes.push(nome);
 }
 
-console.log("\nnomes cadastrados:");
-console.log(nomes) + `${i}`;
-console.log(`Quantidade de nomes: ${nomes.length}`);
+for (let i = 0; i < nomes.length; i++){
+    console.log(`${i+1} - ${nomes[i]}`);
+}
